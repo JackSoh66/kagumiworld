@@ -22,7 +22,7 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['Pixel 7'] } },
   ],
   webServer: {
-    command: 'npm run preview',
+    command: process.env.PLAYWRIGHT_DEV === '1' ? 'npm run dev -- --port 4173' : 'npm run preview',
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 30000,

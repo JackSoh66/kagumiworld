@@ -35,6 +35,8 @@ npm test
 
 工作流推送到默认分支后，确认仓库允许 Actions 运行。分支保护若禁止 Actions 直接向 `main` 推送，需要仓库管理员允许相应 bot 或另行采用 PR 流程。只有配置了可用凭证并且首次真实运行成功后，才算每日生成已经启用。GitHub 对长期无活动的公开仓库可能停用定时任务；可在 Actions 页重新启用。
 
+本次首次云端验证（2026-10-21，马来西亚时间）遇到了 GitHub 账号级阻塞：CI 与手动每日任务均在 runner 启动前失败，检查注释为 **“The job was not started because your account is locked due to a billing issue.”** 需仓库所有者先在 [GitHub Billing](https://github.com/settings/billing) 解除账号限制，再在 Actions 中重新运行。此时没有执行模型生成，也未确认 Actions secret 是否可用；本地构建、开发与生产模式的浏览器测试已通过。
+
 每日流程：
 
 1. 按 `Asia/Kuala_Lumpur` 计算日期；已有当天作品就跳过，避免重复和重复 API 消费。
@@ -58,6 +60,8 @@ tests/YYYY-MM-DD.spec.js               当天作品的行为测试
 ```
 
 日常创作只增加当天的新文件和一条索引。保持旧作品、共享画廊、依赖和工作流不变。作品必须可触控、可键盘操作、适配小屏幕并尊重减少动态效果偏好。禁止空按钮、伪造数据和未经证实的“流行”宣称。灵感来自参考，代码与设计需要原创。
+
+首页使用的本地字体为 DM Sans 和 Manrope；原始 SIL Open Font License 与版权声明保存在 `public/licenses/`，会随构建一起分发。
 
 ## 停止或调整
 

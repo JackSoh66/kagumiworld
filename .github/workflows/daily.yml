@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   create:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     outputs:
       created: ${{ steps.package.outputs.created }}
@@ -112,7 +112,7 @@ jobs:
   publish:
     needs: create
     if: needs.create.outputs.created == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
       contents: write
