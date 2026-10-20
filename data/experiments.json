@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "2026-10-21-afterlight",
+    "title": "Afterlight",
+    "subtitle": "A little light. A lot of possibility.",
+    "description": "An interactive light field that follows your curiosity. Shape its motion, change the mood, and take a little color home.",
+    "date": "2026-10-21",
+    "category": "Playground",
+    "tags": ["Generative art", "Creative coding", "Canvas"],
+    "interaction": "Adjust the light field, change its palette, pause the motion, or export your composition.",
+    "path": "experiments/2026-10-21-afterlight/",
+    "preview": "previews/2026-10-21-afterlight.svg",
+    "research": "research/2026-10-21.md"
+  }
+]

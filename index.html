@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f2eb" />
+    <meta name="description" content="Kagumi World — an evolving collection of playful websites, useful little systems, and experiments in interaction. One curious idea at a time." />
+    <title>Kagumi World — a daily practice in curiosity</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#collection">Skip to experiments</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="./" aria-label="Kagumi World home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6" /></svg>kagumi<span>world</span><sup>®</sup></a>
+      <nav aria-label="Main navigation"><a class="nav-selected" href="#collection">Experiments <span class="nav-count" id="nav-count">01</span></a><a href="#about">The idea <span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></nav>
+      <span class="header-note"><span class="status-dot"></span> A little more curious, every day.</span>
+    </header>
+
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-topline"><span>AN INDEPENDENT INTERNET PLAYGROUND</span><span id="local-date">KUALA LUMPUR · UTC+8</span></div>
+        <div class="hero-content"><div><h1 id="hero-title">What if<span class="question-mark">?</span><br />Let's <em>make it.</em></h1><p class="hero-copy">A collection of small obsessions, happy accidents,<br class="desktop-break" /> and things that feel good to click.</p></div>
+        <div class="curiosity-stamp" aria-hidden="true"><span>MADE OF CURIOSITY</span><svg viewBox="0 0 120 120"><path d="M60 8v104M8 60h104M23 23l74 74M23 97l74-74M39 12l42 96M12 39l96 42M12 81l96-42M39 108l42-96" /></svg><span>OPEN TO POSSIBILITY</span></div></div>
+        <div class="hero-bottom"><span><span class="tiny-square"></span> AN ONGOING PRACTICE, NOT A FINISHED THING.</span><a href="#collection">Take a look around <span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></span></a></div>
+      </section>
+
+      <section class="collection wrap" id="collection" aria-labelledby="collection-title">
+        <div class="section-heading"><h2 id="collection-title">The collection<span id="collection-count">/ 001</span></h2><div class="view-note"><span class="status-dot"></span> ALWAYS A WORK IN PROGRESS</div></div>
+        <div class="collection-toolbar"><div class="filters" role="group" aria-label="Filter experiments"><button class="filter active" data-filter="All" aria-pressed="true">Everything <span id="all-count">1</span></button><button class="filter" data-filter="Playground" aria-pressed="false">Playgrounds</button><button class="filter" data-filter="Landing page" aria-pressed="false">Landing pages</button><button class="filter" data-filter="System" aria-pressed="false">Little systems</button></div><label class="search-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search experiments</span><input type="search" id="search" placeholder="Find something curious…" autocomplete="off" /></label></div>
+        <div class="experiments" id="experiments"></div>
+        <p class="empty-state" id="empty-state" hidden>No experiments here just yet. Try a different filter or search.</p>
+        <p class="results-status sr-only" id="results-status" aria-live="polite"></p>
+        <div class="next-note"><span class="next-symbol" aria-hidden="true">✳</span><p>The next idea is still taking shape.<br /><span>That's kind of the point.</span></p><span class="next-index">TO BE CONTINUED <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div>
+      </section>
+
+      <section class="about-section wrap" id="about" aria-labelledby="about-title"><div class="about-eyebrow"><span class="tiny-square"></span> THE IDEA BEHIND IT ALL</div><div class="about-copy"><h2 id="about-title">Less overthinking.<br />More <em>“what happens if…”</em></h2><p>This is a place to follow an idea all the way to something you can actually use. A playful interface. An oddly satisfying interaction. A tiny system that makes life a little easier.</p><p>New references, a fresh direction, and a working experiment. A daily creative practice, with room for the unexpected.</p><a class="text-link" href="https://github.com/JackSoh66/kagumiworld" target="_blank" rel="noopener noreferrer">Follow the work on GitHub <span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div></section>
+    </main>
+    <footer class="site-footer wrap"><a class="footer-brand" href="./">kagumiworld<span>✳</span></a><span>AN OPEN-ENDED COLLECTION · EST. 2026</span><a href="#hero-title">Back to the top <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V3m-7 7 7-7 7 7"/></svg></a></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

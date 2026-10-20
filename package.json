@@ -1,0 +1,25 @@
+{
+  "name": "kagumiworld",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.5.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/validate.mjs && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "validate": "node scripts/validate.mjs",
+    "test": "playwright test",
+    "test:automation": "node --test automation-tests/*.test.mjs",
+    "daily:research": "node --use-env-proxy scripts/research.mjs",
+    "daily:verify": "node scripts/verify-daily.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource-variable/manrope": "5.3.0",
+    "@playwright/test": "1.64.1",
+    "vite": "8.3.4"
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101916" />
+    <meta name="description" content="Afterlight — an interactive generative light field. Adjust its energy and color, pause time, and save your own composition." />
+    <title>Afterlight — Kagumi World No. 001</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="light-field" role="img" aria-label="An abstract field of drifting light. Use the controls below to change its colors and movement.">An abstract light composition. All controls work independently of the visual.</canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar"><a class="back-link" href="../../"><span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 19 5 5m0 14V5h14"/></svg></span> KAGUMI WORLD</a><span class="edition">EXPERIMENT 001 / OCTOBER 2026</span><button class="round-button" id="pause" type="button" aria-pressed="false" aria-label="Pause animation"><span id="pause-icon" aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></span></button></header>
+    <main>
+      <section class="intro" aria-labelledby="title"><p class="eyebrow"><span></span> A STUDY IN LIGHT & FEELING</p><h1 id="title">A little<br /><em>afterlight.</em></h1><p class="intro-copy">Somewhere between a feeling<br />and a field of light.</p><div class="interaction-hint"><span class="hint-cross" aria-hidden="true">+</span><p>Move closer.<br /><span>Make it yours.</span></p></div></section>
+      <aside class="field-marker" aria-hidden="true"><span>01 — 03</span><span class="marker-line"></span><span>AN OPEN-ENDED FEELING</span></aside>
+      <section class="control-panel" aria-label="Light field controls">
+        <div class="control-intro"><span class="small-star" aria-hidden="true">✳</span><div><h2>Find your frequency.</h2><p>There is no right way to feel this.</p></div></div>
+        <fieldset class="palettes"><legend>THE MOOD</legend><div class="swatches"><button class="swatch selected" type="button" data-palette="sage" aria-label="Sage palette" aria-pressed="true" style="--swatch:#c6dea8"></button><button class="swatch" type="button" data-palette="amber" aria-label="Amber palette" aria-pressed="false" style="--swatch:#e8ab78"></button><button class="swatch" type="button" data-palette="dusk" aria-label="Dusk palette" aria-pressed="false" style="--swatch:#b3a4e5"></button><span id="palette-name">Sage</span></div></fieldset>
+        <div class="slider-control"><div><label for="energy">THE ENERGY</label><output id="energy-value" for="energy">35%</output></div><input id="energy" type="range" min="0" max="100" value="35" /></div>
+        <div class="slider-control density-control"><div><label for="density">THE DETAIL</label><output id="density-value" for="density">240</output></div><input id="density" type="range" min="80" max="480" step="20" value="240" /></div>
+        <div class="action-buttons"><button id="remix" type="button" class="remix" aria-label="Remix composition">↻ <span>Remix</span></button><button id="save" type="button" class="save">Keep this feeling <span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button></div>
+      </section>
+    </main>
+    <footer class="bottom-bar"><span>TAKE A BREATH. STAY A LITTLE.</span><span id="motion-status" aria-live="polite">LIGHT, IN MOTION</span><span>MADE OF CURIOSITY <span aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span></footer>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
