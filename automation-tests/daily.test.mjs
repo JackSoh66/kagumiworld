@@ -89,3 +89,12 @@ test('daily preparation skips an existing day without changing the repository', 
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /exists=true/);
 });
+
+test('daily preparation uses the pinned Codex run date across midnight', async (t) => {
+  const f = await fixture(t);
+  const result = spawnSync(process.execPath, ['scripts/prepare-daily.mjs'], {
+    cwd: f.root, encoding: 'utf8', env: { ...process.env, KAGUMI_DATE: '2026-10-22' },
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /date=2026-10-22\nexists=false/);
+});

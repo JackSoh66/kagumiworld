@@ -9,7 +9,7 @@ const date = process.env.KAGUMI_DATE || localDate();
 assert(/^\d{4}-\d{2}-\d{2}$/.test(date), 'Invalid run date.');
 const baseline = process.env.KAGUMI_BASE_SHA || 'HEAD';
 assert(baseline === 'HEAD' || /^[a-f0-9]{40}$/.test(baseline), 'Invalid baseline.');
-assert.equal(git('rev-parse', 'HEAD'), git('rev-parse', baseline), 'The agent must not commit or change branches.');
+assert.equal(git('rev-parse', 'HEAD'), git('rev-parse', baseline), 'Verify daily changes before committing; HEAD must match the recorded baseline.');
 const before = JSON.parse(git('show', `${baseline}:data/experiments.json`));
 const after = await validate();
 const added = after.filter((entry) => !before.some((old) => old.slug === entry.slug));

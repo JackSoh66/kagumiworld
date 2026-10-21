@@ -13,6 +13,7 @@
     "validate": "node scripts/validate.mjs",
     "test": "playwright test",
     "test:automation": "node --test automation-tests/*.test.mjs",
+    "daily:prepare": "node scripts/prepare-daily.mjs",
     "daily:research": "node --use-env-proxy scripts/research.mjs",
     "daily:verify": "node scripts/verify-daily.mjs"
   },
